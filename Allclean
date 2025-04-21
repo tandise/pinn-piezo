@@ -1,0 +1,6 @@
+#!/bin/bash
+
+find . -type d -name 'int*' -exec rm -r {} +
+
+rm -rf output*
+

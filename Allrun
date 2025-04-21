@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# Run commands sequentially with a 10-minute delay
+commands=(
+    "./PINNPiezoComplexGeom.py 2000 500 15 5 plateHole-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 2000 500 15 10 plateHole-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 2000 500 30 5 plateHole-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 2000 500 30 10 plateHole-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 1000 250 15 5 plateHole-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 1000 250 15 10 plateHole-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 1000 250 30 5 plateHole-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 1000 250 30 10 plateHole-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 2000 500 15 5 disk-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 2000 500 15 10 disk-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 2000 500 30 5 disk-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 2000 500 30 10 disk-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 1000 250 15 5 disk-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 1000 250 15 10 disk-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 1000 250 30 5 disk-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 1000 250 30 10 disk-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 2000 500 15 5 plateSector-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 2000 500 15 10 plateSector-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 2000 500 30 5 plateSector-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 2000 500 30 10 plateSector-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 1000 250 15 5 plateSector-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 1000 250 15 10 plateSector-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 1000 250 30 5 plateSector-piezo > output1.log 2>&1"
+    "./PINNPiezoComplexGeom.py 1000 250 30 10 plateSector-piezo > output1.log 2>&1"
+)
+
+for cmd in "${commands[@]}"; do
+    echo "Running: $cmd"
+    eval "$cmd &"
+    wait # Wait for the command to finish before continuing
+    #echo "Waiting for 10 minutes before running the next command..."
+    #sleep 600 # 10 minutes delay
+done
+
+echo "All commands have been executed."
+
