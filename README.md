@@ -21,7 +21,7 @@ To execute the code, open a terminal and run:
 ./Allrun
 ```
 
-##📊 Viewing Results
+## 📊 Viewing Results
 After execution, navigate into each test case directory to view the output files:
 
     Predicted quantities (e.g., displacement w, electric potential φ, carrier concentration change Δn)
