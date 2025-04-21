@@ -21,5 +21,5 @@ To execute the code, open a terminal and run:
 ./Allrun
 ```
 
-# Who should I contact for support?
+## Who should I contact for support?
 Dr Emad Tandis (e.tandis@aston.ac.uk)
