@@ -21,5 +21,14 @@ To execute the code, open a terminal and run:
 ./Allrun
 ```
 
+##📊 Viewing Results
+After execution, navigate into each test case directory to view the output files:
+
+    Predicted quantities (e.g., displacement w, electric potential φ, carrier concentration change Δn)
+
+    Relative error metrics
+
+    Plotting and visualization data
+
 ## Who should I contact for support?
 Dr Emad Tandis (e.tandis@aston.ac.uk)
