@@ -31,5 +31,7 @@ After execution, navigate into each test case directory to view the output files
     Plotting and visualization data
 
 ## Who should I contact for support?
-Dr Emad Tandis (e.tandis@aston.ac.uk)
+
 Narges Tandis (Tandis.narges@gmail.com)
+
+
